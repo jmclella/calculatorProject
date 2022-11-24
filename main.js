@@ -29,6 +29,11 @@ clearButton.addEventListener('click', () => {
     clearScreen();
 })
 
+equalButton.addEventListener('click', () => {
+    operate();
+    updateScreen();
+})
+
 function clearScreen() {
     num1 = '';
     num2 = '';
@@ -76,7 +81,7 @@ function operate() {
             return;
     }
     
-    num1 = calculation;
+    num1 = Math.round((calculation * 10)) / 10;
     currentOperator = '';
     num2 = '';
 }
