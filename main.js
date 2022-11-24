@@ -10,6 +10,7 @@ const numList = document.querySelectorAll('.number');
 const operatorList = document.querySelectorAll('.operator');
 const clearButton = document.querySelector('.clear');
 const equalButton = document.querySelector('.equal');
+const negativeButton = document.querySelector('.negative');
 
 const lightMode = document.querySelector('.light-mode');
 const darkMode = document.querySelector('.dark-mode');
@@ -51,6 +52,18 @@ equalButton.addEventListener('click', () => {
     operate();
     updateScreen();
 })
+
+negativeButton.addEventListener('click', () => {
+    absoluteFunction();
+    updateScreen();
+})
+
+function absoluteFunction() {
+    if (num1 === '') {
+        return;
+    }
+    num1 = num1 * -1;
+}
 
 function clearScreen() {
     num1 = '';
