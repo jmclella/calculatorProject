@@ -9,24 +9,48 @@ html {
 }
 
 body {
-    background-color: azure;
+    background-color: #c2e2f2;
     margin: 0px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.page-brightness {
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+    column-gap: 25px;
+}
+
+.light-mode {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.dark-mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .calc-body {
     display: flex;
     flex-direction: column;
-    border: 12px solid black;
+    border: 12px solid #444647;
     height: 550px;
     width: 450px;
-    margin-top: 100px;
-    background-color: beige;
+    margin-top: 75px;
+    background-color: white;
 }
 
 .calc-screen {
-    border-bottom: 6px solid black;
     height: 30%;
     width: 100%;
     background-color: rgb(132, 128, 128);
@@ -46,7 +70,12 @@ body {
     align-items: center;
     padding-right: 30px;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 32px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .calc-current-screen {
@@ -58,7 +87,12 @@ body {
     align-items: center;
     padding-right: 30px;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 32px;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .calc-bottom {
@@ -87,7 +121,6 @@ body {
 .clear {
     width: 63%;
     height: 86%;
-    border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,7 +132,6 @@ body {
 .negative {
     width: 30%;
     height: 86%;
-    border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,7 +153,6 @@ body {
     width: 30%;
     height: 30%;
     display: flex;
-    border: 2px solid black;
     justify-content: center;
     align-items: center;
     font-weight: bold;
@@ -141,7 +172,6 @@ body {
 .zero {
     width: 63%;
     height: 86%;
-    border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,7 +183,6 @@ body {
 .decimal {
     width: 30%;
     height: 86%;
-    border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,10 +213,20 @@ body {
     align-items: center;
     font-weight: bold;
     font-size: 36px;
-    border: 2px solid black;
+}
+
+button {
+    border: 3px solid black;
+    border-radius: 16px;
 }
 
 button:hover {
     opacity: .5;
     cursor: pointer;
+}
+
+.light-mode:hover,
+.dark-mode:hover {
+    background-color: #08adff;
+    color: gold;
 }

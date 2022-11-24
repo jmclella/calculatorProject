@@ -11,6 +11,24 @@ const operatorList = document.querySelectorAll('.operator');
 const clearButton = document.querySelector('.clear');
 const equalButton = document.querySelector('.equal');
 
+const lightMode = document.querySelector('.light-mode');
+const darkMode = document.querySelector('.dark-mode');
+
+const calcBody = document.querySelector('.calc-body');
+//const calcBody = document.querySelector('.calc-body');
+
+lightMode.addEventListener('click', () => {
+    document.body.style.backgroundColor = '#c2e2f2';
+    calcBody.style.borderColor = '#444647';
+    calcBody.style.backgroundColor = 'white'
+})
+
+darkMode.addEventListener('click', () => {
+    document.body.style.backgroundColor = '#444647';
+    calcBody.style.borderColor = '#c2e2f2';
+    calcBody.style.backgroundColor = '#c2e2f2'
+})
+
 numList.forEach(num => {
     num.addEventListener('click', () => {
         appendNumber(num.textContent);
